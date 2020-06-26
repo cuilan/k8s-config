@@ -10,11 +10,11 @@ bootstrapTokens:
 kind: InitConfiguration
 localAPIEndpoint:
   # 当前服务器IP地址
-  advertiseAddress: 192.168.40.129
+  advertiseAddress: 10.10.5.105
   bindPort: 6443
 nodeRegistration:
   criSocket: /var/run/dockershim.sock
-  name: zypc
+  name: k8s-master
   taints:
   - effect: NoSchedule
     key: node-role.kubernetes.io/master
@@ -32,7 +32,7 @@ etcd:
     dataDir: /var/lib/etcd
 imageRepository: k8s.gcr.io
 kind: ClusterConfiguration
-kubernetesVersion: v1.18.0
+kubernetesVersion: v1.18.3
 networking:
   dnsDomain: cluster.local
   # pod网段，兼容flannel

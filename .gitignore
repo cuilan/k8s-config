@@ -1,5 +1,18 @@
+# common
 *.log
-
-db
-
+logs
+*/logs
 .DS_Store
+*/.DS_Store
+# ------------------------
+# docker-compose
+#   mysql
+#     db
+#   redis
+#     db
+db
+# ------------------------
+# docker-file
+# ------------------------
+# k8s
+

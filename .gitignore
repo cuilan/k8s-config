@@ -6,13 +6,6 @@ logs
 */.DS_Store
 # ------------------------
 # docker-compose
-#   mysql
-#     db
-#   redis
-#     db
-db
-._db
-db.tar.gz
 # ------------------------
 # docker-file
 # ------------------------

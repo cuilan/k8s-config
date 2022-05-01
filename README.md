@@ -4,7 +4,9 @@
 
 docker-compose
 
+* [calibre](./docker-compose/calibre)
 * [centos](./docker-compose/centos)
+* [cloud-torrent](./docker-compose/cloud-torrent)
 * [elasticsearch](./docker-compose/elasticsearch)
 * [etcd](./docker-compose/etcd)
 * [gitlab](./docker-compose/gitlab)
@@ -13,7 +15,9 @@ docker-compose
 * [mysql](./docker-compose/mysql)
 * [nfs-server](./docker-compose/nfs-server)
 * [nginx](./docker-compose/nginx)
+* [plex](./docker-compose/plex)
 * [redis](./docker-compose/redis)
+* [samba](./docker-compose/samba)
 
 ## docker-file
 

@@ -15,7 +15,11 @@ docker-compose
 * [mysql](./docker-compose/mysql)
 * [nfs-server](./docker-compose/nfs-server)
 * [nginx](./docker-compose/nginx)
+* [nginx-prod](./docker-compose/nginx-prod/)
 * [plex](./docker-compose/plex)
+* [portainer](./docker-compose/portainer/)
+* [qbittorrent](./docker-compose/qbittorrent/)
+* [rancher](./docker-compose/rancher/)
 * [redis](./docker-compose/redis)
 * [samba](./docker-compose/samba)
 
@@ -32,10 +36,10 @@ Dockerfile
 
 k8s
 
-* [core](./k8s/core)
 * [flannel](./k8s/flannel)
 * [kubernetes-dashboard](./k8s/kubernetes-dashboard)
-* [nginx-deployment](./k8s/nginx-deployment)
-* [simple](./k8s/simple)
+* [namespace](./k8s/namespace/)
+* [test](./k8s/test/)
+  * [nginx-demo](./k8s/test/nginx-demo/)
 
 ## shells

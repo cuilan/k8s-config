@@ -1,17 +1,12 @@
-# my-ops
+# k8s-config
 
-## centos
+k8s 的一些配置文件
 
-## k8s
+## config
 
-k8s
+* [flannel](./flannel)
+* [kubernetes-dashboard](./kubernetes-dashboard)
+* [namespace](./namespace/)
+* [test](./test/)
+  * [nginx-demo](./test/nginx-demo/)
 
-* [flannel](./k8s/flannel)
-* [kubernetes-dashboard](./k8s/kubernetes-dashboard)
-* [namespace](./k8s/namespace/)
-* [test](./k8s/test/)
-  * [nginx-demo](./k8s/test/nginx-demo/)
-
-## shells
-
-## ubuntu

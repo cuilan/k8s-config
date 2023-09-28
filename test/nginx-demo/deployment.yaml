@@ -3,11 +3,11 @@ kind: Deployment
 metadata:
   name: nginx-demo
 spec:
+  # 运行2个实例
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
-  # 运行2个实例
-  replicas: 1
   template:
     metadata:
       labels:

@@ -1,0 +1,37 @@
+# 使用的API版本，最新版本Kubernetes位于apps/v1的API组
+apiVersion: apps/v1
+# 声明定义的是一个Deployment对象
+kind: Deployment
+# metadata 部分定义Deployment的名字和标签
+metadata:
+  # 部署名称
+  name: deploy-nginx
+  labels:
+    app: deploy-nginx
+# spec 下的内容都与Pod有关
+spec:
+  # spec.replicas 告诉k8s需要部署多少个Pod副本
+  replicas: 3
+  # spec.selector 表明Deployment要管理的Pod所必备的标签
+  selector:
+    # 匹配所有标签app且值为deploy-nginx
+    matchLabels:
+      app: deploy-nginx
+  minReadySeconds: 10
+  # spec.template 下的内容定义了Deployment管理的Pod的模板
+  template:
+    # 元数据定义每一个Pod拥有的标签 key=app, value=deploy-nginx
+    metadata:
+      labels:
+        app: deploy-nginx
+    # spec.template.spec 说明具体部署的容器与镜像信息
+    spec:
+      containers:
+      - name: deploy-nginx
+        image: nginx:1.20.2-alpine
+        # 镜像拉取策略，Always：每次启动或重启都会拉取，IfNotPresent：不存在从远程仓库拉取
+        imagePullPolicy: Always
+        # 容器对外暴露端口
+        ports:
+        - name: deploy-nginx
+          containerPort: 80

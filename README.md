@@ -8,5 +8,5 @@ k8s 的一些配置文件
 * [kubernetes-dashboard](./kubernetes-dashboard)
 * [namespace](./namespace/)
 * [test](./test/)
-  * [nginx-demo](./test/nginx-demo/)
+  * [deploy-nginx](./test/deploy-nginx/)
 

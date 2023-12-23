@@ -11,7 +11,7 @@ metadata:
 # spec 下的内容都与Pod有关
 spec:
   # spec.replicas 告诉k8s需要部署多少个Pod副本
-  replicas: 3
+  replicas: 1
   # spec.selector 表明Deployment要管理的Pod所必备的标签
   selector:
     # 匹配所有标签app且值为deploy-nginx

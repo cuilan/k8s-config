@@ -28,10 +28,24 @@ spec:
     spec:
       containers:
       - name: deploy-nginx
-        image: nginx:1.20.2-alpine
+        image: nginx:1.25.3-alpine
         # 镜像拉取策略，Always：每次启动或重启都会拉取，IfNotPresent：不存在从远程仓库拉取
         imagePullPolicy: Always
+        resources:
+          limits:
+            memory: 512Mi
+            cpu: "1"
+          requests:
+            memory: 16Mi
+            cpu: "0.2"
         # 容器对外暴露端口
         ports:
         - name: deploy-nginx
           containerPort: 80
+        volumeMounts:
+        - name: logs
+          mountPath: /var/log/nginx
+      volumes:
+      - name: logs
+        hostPath:
+          path: /data/kind/test/nginx

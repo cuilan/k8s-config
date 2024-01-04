@@ -10,3 +10,6 @@ nodes:
     listenAddress: "0.0.0.0"
     # Optional, defaults to tcp
     protocol: tcp
+  extraMounts:
+  - hostPath: /data/kind
+    containerPath: /data/kind

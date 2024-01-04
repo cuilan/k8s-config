@@ -24,9 +24,9 @@ nodes:
     # Optional, defaults to tcp
     protocol: tcp
   # add a mount from /path/to/my/files on the host to /files on the node
-  #extraMounts:
-  #- hostPath: /path/to/my/files
-    #containerPath: /files
+  extraMounts:
+  - hostPath: /data/kind
+    containerPath: /data/kind
     # Optional, default false
     #readOnly: true
 - role: worker

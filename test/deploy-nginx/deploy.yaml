@@ -45,7 +45,17 @@ spec:
         volumeMounts:
         - name: logs
           mountPath: /var/log/nginx
+        - name: conf
+          mountPath: /etc/nginx/conf.d
+        - name: html
+          mountPath: /usr/share/nginx/html
       volumes:
       - name: logs
         hostPath:
-          path: /data/kind/test/nginx
+          path: /data/kind/test/depoly-nginx/logs
+      - name: conf
+        hostPath:
+          path: /data/kind/test/depoly-nginx/conf.d
+      - name: html
+        hostPath:
+          path: /data/kind/test/depoly-nginx/html

@@ -1,0 +1,21 @@
+---
+providers:
+  kubernetesCRD:
+    namespaces:
+      - kube-addons
+  kubernetesIngress:
+    namespaces:
+      - kube-addons
+
+ports:
+  traefik:
+    expose: true
+    nodePort: 30900
+  web:
+    nodePort: 30880
+  websecure:
+    nodePort: 30443
+
+
+service:
+  type: NodePort

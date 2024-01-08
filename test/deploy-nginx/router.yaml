@@ -10,7 +10,7 @@ spec:
     priority: 10
     services:
     - kind: Service
-      name: test-nginx
+      name: svc-nginx
       passHostHeader: true
       port: 80
       responseForwarding:

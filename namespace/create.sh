@@ -2,5 +2,6 @@
 
 set -e
 
-kubectl apply -f namespace-dev.json
-kubectl apply -f namespace-test.json
+kubectl apply -f ns-dev.json
+kubectl apply -f ns-test.json
+kubectl apply -f ns-kube-addons.json

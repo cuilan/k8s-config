@@ -1,6 +1,6 @@
 #!/bin/bash
 
-kind create cluster --config /home/kind/1c.yaml --name 1c
+kind create cluster --config ./1c.yaml --name 1c
 
 # 使用 kubectl 查看集群信息
 kubectl cluster-info --context kind-1c

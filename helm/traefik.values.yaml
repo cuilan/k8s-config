@@ -1,21 +1,26 @@
 ---
+# 指定 Traefik 将如何发现和管理 Kubernetes 资源
 providers:
+  # 启用 Traefik 使用 Kubernetes 自定義资源定义 (CRD) 来管理服务和路由
   kubernetesCRD:
     namespaces:
       - kube-addons
+  # 启用 Traefik 使用 Kubernetes Ingress 资源来管理路由
   kubernetesIngress:
     namespaces:
       - kube-addons
 
 ports:
+  # 暴露 Traefik 的仪表板端口（默认 8080），并将其映射到 NodePort 30900
   traefik:
     expose: true
     nodePort: 30900
+  # 暴露一个用于访问您部署的 Web 应用程序的端口（默认 80），并将其映射到 NodePort 30880
   web:
     nodePort: 30880
+  # 暴露一个用于访问您部署的 Web 应用程序的 HTTPS 端口（默认 443），并将其映射到 NodePort 30443
   websecure:
     nodePort: 30443
-
 
 service:
   type: NodePort

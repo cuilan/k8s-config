@@ -2,7 +2,7 @@ kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 name: 1c
 networking:
-  apiServerAddress: "127.0.0.1"
+  apiServerAddress: "10.121.1.214"
   apiServerPort: 6443
   kubeProxyMode: "ipvs"
 nodes:
@@ -13,6 +13,12 @@ nodes:
     nodeRegistration:
       kubeletExtraArgs:
         node-labels: "ingress-ready=true"
+  - |
+    apiVersion: kubeadm.k8s.io/v1beta3
+    kind: ClusterConfiguration
+    apiServer:
+      certSANs:
+      - "10.121.1.214"  # 你的服务器IP地址
   extraPortMappings:
   - containerPort: 30080
     hostPort: 80
@@ -47,5 +53,7 @@ nodes:
     listenAddress: "0.0.0.0"
     protocol: tcp
   extraMounts:
+  - hostPath: /etc/localtime
+    containerPath: /etc/localtime
   - hostPath: /data/kind
     containerPath: /data/kind

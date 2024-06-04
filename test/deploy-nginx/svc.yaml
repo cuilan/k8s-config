@@ -5,10 +5,11 @@ metadata:
   labels:
     svc: svc-nginx
 spec:
-  type: NodePort
+  # type: NodePort
   selector:
     app: deploy-nginx
   ports:
-    - port: 8000
-      targetPort: 80
-      nodePort: 30080
+    - name: web
+      port: 8000
+      targetPort: web
+      # nodePort: 30080

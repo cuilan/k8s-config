@@ -40,7 +40,7 @@ spec:
             cpu: "0.2"
         # 容器对外暴露端口
         ports:
-        - name: deploy-nginx
+        - name: web
           containerPort: 80
         volumeMounts:
         - name: logs

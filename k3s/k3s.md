@@ -20,27 +20,16 @@ systemctl disable NetworkManager --now
 systemctl stop NetworkManager --now
 reboot
 ```
-
-## 安装
+---
+## 安装k3s
 
 ```bash
-# 安装k3s
 curl -sfL https://get.k3s.io | sh -
+```
 
-# 查看k3s状态
-systemctl status k3s
-
-# 查看k3s版本
-k3s version
-
-# 查看k3s集群信息
-k3s kubectl cluster-info
-
-# 查看k3s集群节点信息
-k3s kubectl get nodes
-
-# 查看k3s集群pod信息
-k3s kubectl get pods -A
+中国用户，可以使用以下方法加速安装：
+```bash
+curl -sfL https://rancher-mirror.rancher.cn/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn sh -
+```
 
 /usr/local/bin/k3s server --docker --data-dir=/data/k3s-data --log /data/logs/k3s/k3s.log --disable traefik
-```
